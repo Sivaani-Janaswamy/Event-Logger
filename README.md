@@ -20,7 +20,7 @@ This is a simple event logging application built with Node.js, Express, and Mong
    ```bash
    npm run dev
    ```      
-4. Open your browser and navigate to `http://localhost:5000`
+4. Open your browser and navigate to `http://localhost:3000`
 ## Usage
 - Use the web interface to log, view, and delete events.
 ## Contributing 
@@ -30,4 +30,6 @@ This project is licensed under the MIT License.
 ## Acknowledgements
 - [Express](https://expressjs.com/)
 - [Mongoose](https://mongoosejs.com/)
-- [dotenv](https://www.npmjs.com/package/dotenv)        
+- [dotenv](https://www.npmjs.com/package/dotenv)        <br />
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.com/)
