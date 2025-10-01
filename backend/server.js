@@ -5,7 +5,7 @@ import { connectDB } from './config/db.js';
 import eventRoutes from './routes/event.route.js';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 app.use(express.json());
