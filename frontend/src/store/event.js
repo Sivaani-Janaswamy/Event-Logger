@@ -15,5 +15,10 @@ export const useEventStore = create((set) => ({
         const data = await res.json();
         set((state) => ({events: [...state.events, data.data]}));
         return {success:true,message:"Event Created Successfully"};
+    },
+    fetchEvents: async () => {
+        const res = await fetch("/api/events");
+        const data = await res.json();
+        set({events: data.data});
     }
 }));

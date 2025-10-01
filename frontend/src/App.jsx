@@ -1,5 +1,5 @@
 import { Box, useColorModeValue } from '@chakra-ui/react'
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import CreatePage from './pages/CreatePage'
 import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
@@ -7,12 +7,22 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <Box minH={"100vh"} bg={useColorModeValue("yellow.300", "cyan.600")}>
+    <Box 
+      display="flex" 
+      flexDirection="column" 
+      minH="100vh" 
+      bg={useColorModeValue("yellow.300", "cyan.600")}
+    >
       <Navbar />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/create' element={<CreatePage />} />
-      </Routes>
+
+      {/* Main content grows to fill space */}
+      <Box flex="1">
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/create' element={<CreatePage />} />
+        </Routes>
+      </Box>
+
       <Footer />
     </Box>
   )

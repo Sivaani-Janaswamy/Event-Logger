@@ -13,6 +13,7 @@ import {
   Text,
   Box, 
   useToast,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { useEventStore } from '../store/event.js'; 
 
@@ -34,9 +35,13 @@ const CreatePage = () => {
       toast({
         title: "Event Created",
         description: message,
-        status: "success",
+        position: "top",
         duration: 3000,
         isClosable: true,
+        render: () => (
+        <Box color="white" p={3} bg="red.500" borderRadius="md">
+        Event Created Successfully!
+        </Box>),
       });
     }else{
       toast({
@@ -67,14 +72,14 @@ const CreatePage = () => {
             as="h1"
             size={{ base: "2xl", md: "3xl" }} // Responsive font size
             fontWeight="bold" // Bolder font weight to match image
-            color="gray.800" // Dark color, not red
+            color= {useColorModeValue("gray.800", "gray.200")} // Dark color, not red
             lineHeight="1.1" // Tighter line height
           >
             Log your Events Seamlessly
           </Heading>
           
           {/* 2. STYLED SUB-TEXT */}
-          <Text fontSize={{ base: "md", md: "lg" }} color="gray.800" maxW="lg">
+          <Text fontSize={{ base: "md", md: "lg" }} color={useColorModeValue("gray.800", "gray.200")} maxW="lg">
             Log, track, and manage all your important events in one place. Never miss a detail again.
           </Text>
 
