@@ -19,10 +19,16 @@
   },
   "homepage": "https://github.com/Sivaani-Janaswamy/Event-Logger#readme",
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.2",
+    "@mui/material": "^7.3.2",
     "dotenv": "^17.2.2",
     "env": "^0.0.2",
     "express": "^5.1.0",
-    "mongoose": "^8.18.3"
+    "mongoose": "^8.18.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
